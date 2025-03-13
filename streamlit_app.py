@@ -25,7 +25,7 @@ ingrediencts_list =st.multiselect(
 if ingrediencts_list:
     ingredients_string = ''
     for fruits_choose in ingrediencts_list:
-        ingredients_string+=fruits_choose +'SMOOTHIES.PUBLIC."RNC84K5TK4X07YYM (Stage)"SMOOTHIES.PUBLIC."RNC84K5TK4X07YYM (Stage)" '
+        ingredients_string+=fruits_choose +' '
         smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
         st_df = st.dataframe(data=smoothiefroot_response.json(),use_container_width=True)
     my_insert_stmt = """ insert into smoothies.public.orders(ingredients,name_on_order)
